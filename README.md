@@ -14,7 +14,6 @@ contract Bridge {
         token.transferFrom(msg.sender, address(this), amount);
         lockedTokens[amount] = true;
     }
-
     function unlockTokens(uint256 amount, address targetChain) external {
         require(lockedTokens[amount], "Token not locked");
         lockedTokens[amount] = false;
