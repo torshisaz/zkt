@@ -4,8 +4,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 contract Bridge {
     IERC20 public token;
     mapping(uint256 => bool) public lockedTokens;
-    
-    constructor(address _token) {
+        constructor(address _token) {
         token = IERC20(_token);
     }
     function lockTokens(uint256 amount) external {
